@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.sxjr:sxjr-common-mapper:1.8-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sxjr/sxjr-common-mapper/1.8-SNAPSHOT/sxjr-common-mapper-1.8-20180410.075717-19.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sxjr/sxjr-common-mapper/1.8-SNAPSHOT/sxjr-common-mapper-1.8-20180410.075717-19-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sxjr/sxjr-common-mapper/1.8-SNAPSHOT/sxjr-common-mapper-1.8-20180410.075717-19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

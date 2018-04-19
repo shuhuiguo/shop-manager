@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.shuhg</groupId>
+    <artifactId>shop-manager</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <fastjson.version>1.1.39</fastjson.version>
+        <version>1.5.4.RELEASE</version>
+        <spring.boot.version>1.5.4.RELEASE</spring.boot.version>
+        <mysql.version>5.1.29</mysql.version>
+        <sxjr.common.mapper.version>1.8-SNAPSHOT</sxjr.common.mapper.version>
+        <druid.version>0.2.23</druid.version>
+        <mybatis-spring-boot.version>1.2.0</mybatis-spring-boot.version>
+    </properties>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.4.RELEASE</version>
+    </parent>
+<dependencies>
+    <!-- web程序的启动项依赖，通过此依赖可引入内嵌的tomcat等web必须的jars -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>${mybatis-spring-boot.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-configuration-processor</artifactId>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.3.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore</artifactId>
+        <version>4.3.1</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpmime</artifactId>
+        <version>4.3.1</version>
+    </dependency>
+
+    <!-- log4j 日志-->
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.1.7</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>log4j-over-slf4j</artifactId>
+        <version>1.7.10</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.13</version>
+    </dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-core</artifactId>
+        <version>1.1.7</version>
+    </dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.1.7</version>
+    </dependency>
+
+    <!--&lt;!&ndash; 代码直接调用log4j会被桥接到slf4j &ndash;&gt;-->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>log4j-over-slf4j</artifactId>
+        <version>1.7.13</version>
+        <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.sxjr</groupId>
+        <artifactId>sxjr-common-mapper</artifactId>
+        <version>${sxjr.common.mapper.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>${druid.version}</version>
+    </dependency>
+
+
+    <!--分页插件-->
+    <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper</artifactId>
+        <version>4.2.1</version>
+    </dependency>
+    <!--通用Mapper-->
+    <dependency>
+        <groupId>tk.mybatis</groupId>
+        <artifactId>mapper</artifactId>
+        <version>3.3.9</version>
+    </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>19.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-autoconfigure</artifactId>
+        <version>1.4.0.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>4.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+    <!--<dependency>-->
+        <!--<groupId>org.springframework</groupId>-->
+        <!--<artifactId>spring-aop</artifactId>-->
+        <!--<version>4.3.12.RELEASE</version>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+        <!--<groupId>org.springframework</groupId>-->
+        <!--<artifactId>spring-aspects</artifactId>-->
+        <!--<version>4.3.12.RELEASE</version>-->
+    <!--</dependency>-->
+</dependencies>
+    <build>
+
+        <!--<resources>-->
+            <!--<resource>-->
+                <!--<targetPath>${project.build.directory}/classes</targetPath>-->
+                <!--<directory>src/main/resources</directory>-->
+                <!--<filtering>true</filtering>-->
+                <!--<includes>-->
+                    <!--&lt;!&ndash;<include>application.properties</include>&ndash;&gt;-->
+                    <!--<include>static/**</include>-->
+                    <!--<include>templates/**</include>-->
+                <!--</includes>-->
+                <!--&lt;!&ndash;<excludes>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<exclude>${env}/**</exclude>&ndash;&gt;-->
+                <!--&lt;!&ndash;</excludes>&ndash;&gt;-->
+            <!--</resource>-->
+            <!--&lt;!&ndash;<resource>&ndash;&gt;-->
+                <!--&lt;!&ndash;<directory>src/main/resources/conf</directory>&ndash;&gt;-->
+                <!--&lt;!&ndash;<targetPath>.</targetPath>&ndash;&gt;-->
+            <!--&lt;!&ndash;</resource>&ndash;&gt;-->
+        <!--</resources>-->
+        <!--<plugins>-->
+            <!--&lt;!&ndash; 通过maven构建的插件  &ndash;&gt;-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--</plugin>-->
+
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-jar-plugin</artifactId>-->
+
+                <!--<configuration>-->
+                    <!--&lt;!&ndash;<excludes>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<exclude>**/logback.xml</exclude>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<exclude>**/elasticsearch.properties</exclude>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<exclude>**/kafka.properties</exclude>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</excludes>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<includes>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include>classpath:${env}/conf/logback.xml</include>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include>classpath:${env}/conf/elasticsearch.properties</include>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include>classpath:${env}/conf/kafka.properties</include>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</includes>&ndash;&gt;-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
+            </plugins>
+    </build>
+</project>
