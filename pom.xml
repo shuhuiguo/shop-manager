@@ -56,7 +56,7 @@
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpcore</artifactId>
-        <version>4.3.1</version>
+        <version>4.4.1</version>
     </dependency>
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
@@ -146,7 +146,6 @@
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>19.0</version>
-        <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -173,6 +172,38 @@
         <!--<artifactId>spring-aspects</artifactId>-->
         <!--<version>4.3.12.RELEASE</version>-->
     <!--</dependency>-->
+
+    <dependency>
+        <groupId>com.xuxueli</groupId>
+        <artifactId>xxl-job-core</artifactId>
+        <version>1.9.2-SNAPSHOT</version>
+        <exclusions>
+            <exclusion>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-server</artifactId>
+        <version>9.2.24.v20180105</version>
+    </dependency>
+    <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-util</artifactId>
+        <version>9.2.24.v20180105</version>
+    </dependency>
+    <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-http</artifactId>
+        <version>9.2.24.v20180105</version>
+    </dependency>
+    <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-io</artifactId>
+        <version>9.2.24.v20180105</version>
+    </dependency>
 </dependencies>
     <build>
 
@@ -221,6 +252,16 @@
             <!--</plugin>-->
         <!--</plugins>-->
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                        <encoding>UTF8</encoding>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>

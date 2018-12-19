@@ -12,6 +12,9 @@ import org.apache.http.message.BasicHeader;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by 大舒 on 2018/3/15.
@@ -77,7 +80,7 @@ public class YangkeduoTest {
      */
     @Test
     public void getSkuTest() throws IOException {
-        CloseableHttpResponse response = httpClient.get("http://mobile.yangkeduo.com/goods.html?goods_id=504118369");
+        CloseableHttpResponse response = httpClient.get("http://mobile.yangkeduo.com/goods.html?goods_id=960143708");
         String str = httpClient.getResponseStr(response,true);
         IYangkeduoBizService yangkeduoBizService = new YangkeduoBizServiceImpl();
         str = yangkeduoBizService.getPageStr(str).replace("ID","Id");
@@ -87,8 +90,23 @@ public class YangkeduoTest {
         String strSku =info.getJSONArray("skus").toJSONString().replace("normal_price","price").replace("group_price","multi_price");
         JSONArray skus = JSON.parseArray(strSku);
         SourceGoodsEntity goodsEntity  = JSON.parseObject(info.toJSONString(),SourceGoodsEntity.class);
+        List<SourceSkuEntity> skuEntities = JSON.parseArray(skus.toJSONString(), SourceSkuEntity.class);
         print(JSON.toJSONString(goodsEntity));
         print(JSON.toJSONString(JSON.parseArray(skus.toJSONString(), SourceSkuEntity.class)));
+    }
+    @Test
+    public void addSourceGoodsByCatUrl() throws IOException {
+        String url = "http://apiv3.yangkeduo.com/operation/59/groups?opt_type=3&offset=115&size=100&sort_type=DEFAULT&flip=&pdduid=0";
+        //Header header = new BasicHeader("Accept-Encoding","GZIP");
+        CloseableHttpResponse response = httpClient.get(url);
+        String str = httpClient.getResponseStr(response,false);
+        Pattern pattern = Pattern.compile("(\"goods_id\":)(.*?),");
+        Matcher matcher = pattern.matcher(str);
+        while (matcher.find()) {
+            //System.out.println(matcher.group(0));
+            //System.out.println(matcher.group(1));
+            System.out.println(matcher.group(2));
+        }
     }
 
     /**

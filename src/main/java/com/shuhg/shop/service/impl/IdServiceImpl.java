@@ -4,10 +4,12 @@ import com.shuhg.shop.service.IdService;
 import com.shuhg.shop.util.DataUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by 大舒 on 2018/4/19.
  */
+@Service
 public class IdServiceImpl implements IdService {
     private  static Logger logger = LoggerFactory.getLogger(IdServiceImpl.class);
     private IdWorker idWorker ;

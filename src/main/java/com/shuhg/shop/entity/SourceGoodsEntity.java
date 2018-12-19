@@ -14,7 +14,7 @@ public class SourceGoodsEntity {
     /**
      * 编辑商品时，必填
      */
-    private Integer goods_id;
+    private String goods_id;
     /**
      * 必填
      商品标题，例如，新疆特产 红满疆枣夹核桃500g
@@ -60,11 +60,11 @@ public class SourceGoodsEntity {
         this.id = id;
     }
 
-    public Integer getGoods_id() {
+    public String getGoods_id() {
         return goods_id;
     }
 
-    public void setGoods_id(Integer goods_id) {
+    public void setGoods_id(String goods_id) {
         this.goods_id = goods_id;
     }
 

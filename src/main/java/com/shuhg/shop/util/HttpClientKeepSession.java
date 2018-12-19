@@ -1,5 +1,6 @@
 package com.shuhg.shop.util;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -98,7 +99,7 @@ public class HttpClientKeepSession {
             throws  IOException {
 
         List<NameValuePair> nvps = toNameValuePairList(parameters);
-        HttpEntity entity = new UrlEncodedFormEntity(nvps, "UTF-8");
+        HttpEntity entity = new StringEntity(JSON.toJSONString(parameters), "UTF-8");
         return  getResponseStr(post(url,entity));
 
     }
@@ -319,7 +320,7 @@ public class HttpClientKeepSession {
             // 判断响应实体是否为空
             if (entity != null) {
                 try {
-                    String responseString = EntityUtils.toString(entity);
+                    String responseString = EntityUtils.toString(entity,"UTF-8");
                     return responseString;
                 } catch (Exception ex) {
 

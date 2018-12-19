@@ -6,5 +6,5 @@ import com.sxjr.common.base.mapper.BaseMapper;
 /**
  * Created by 大舒 on 2018/3/20.
  */
-public interface GoogsSourceMapper extends BaseMapper<SourceGoodsEntity> {
+public interface SourceGoodsMapper extends BaseMapper<SourceGoodsEntity> {
 }

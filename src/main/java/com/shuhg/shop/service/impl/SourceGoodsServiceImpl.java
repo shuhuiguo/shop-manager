@@ -9,5 +9,5 @@ import org.springframework.stereotype.Service;
  * Created by 大舒 on 2018/3/20.
  */
 @Service
-public class ISourceGoodsService extends BaseService<SourceGoodsEntity> implements ISourceGoodsService {
+public class SourceGoodsServiceImpl extends BaseService<SourceGoodsEntity> implements ISourceGoodsService {
 }

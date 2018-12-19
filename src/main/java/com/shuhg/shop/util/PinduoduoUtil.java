@@ -36,6 +36,7 @@ public class PinduoduoUtil {
         publicParams.put("type",request.getType());
         publicParams.put("timestamp",request.getTimestamp());
         publicParams.put("version",request.getVersion());
+        publicParams.put("data_type",request.getData_type());
         return publicParams;
     }
 

@@ -2,7 +2,6 @@ package com.shuhg.shop.service.impl;
 
 import com.shuhg.shop.model.YangkeduoLoginResult;
 import com.shuhg.shop.service.IYangkeduoBizService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.regex.Matcher;
@@ -14,8 +13,7 @@ import java.util.regex.Pattern;
 @Service("yangkeduoBizService")
 public class YangkeduoBizServiceImpl implements IYangkeduoBizService {
 
-    @Autowired
-    IYangkeduoBizService yangkeduoBizService;
+
     /**
      * 获取短信验证码
      *

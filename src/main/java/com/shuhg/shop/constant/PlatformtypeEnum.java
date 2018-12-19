@@ -5,7 +5,7 @@ package com.shuhg.shop.constant;
  */
 public enum PlatformtypeEnum {
     //拼多多
-    PINGDUODUO,
+    PINDUODUO,
     //楚楚街
     CHUCHUJIE,
     //淘宝
